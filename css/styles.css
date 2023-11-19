@@ -1,0 +1,356 @@
+body, header, nav, main, footer, h4, div, img, ul, p, a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {   /* Add the body selector */
+    background-color: white;   /* Set the background colour */
+}   /* Closing brace for the body selector */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1 {
+    font-family: 'Josefin Slab', serif;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.mobile-nav a{
+    color: #000;
+    font-family: 'Josefin Slab', serif;
+    text-align: center;
+    font-family: 1em;
+    text-decoration: none;
+    padding: 3%;
+    display: block;
+}
+
+.mobile-nav a.menu-icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 140%;
+} 
+
+.mobile {
+	display: block;
+}
+
+.tablet-desktop, #menu-links {
+	display: none;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 150px;
+    right: 20px;
+    color: white;
+    text-align: right;
+    font-family: 'Josefin Slab', serif;
+}
+
+main {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.oneimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gridcontainer img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.griditem {
+    margin: auto;
+}
+
+.griditem img {
+    width: 80%;
+    height: 100%;
+}
+
+.griditem h2, .griditem p {
+    text-align: center;
+}
+
+.griditem h2 {
+    font-family: 'Manrope', sans-serif;
+}
+
+.griditem p {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.onepicture {
+    margin-top: 10px;
+}
+
+.button {
+    background-color: darkolivegreen;
+    border: none;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 400;
+    color: white;
+}
+
+.comments {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 0 40px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.comments p{
+    margin: 8px 0;
+}
+
+.divider {
+    margin: 20px;
+    border-top: darkolivegreen 2px solid;
+}
+
+#center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#introduction {
+    font-family: 'Josefin Slab', serif;
+    margin: 30px;
+}
+
+#introduction p {
+    font-size: 21px;
+}
+
+#contact {
+    padding-top: 12px;
+}
+
+.row {
+    display: block;
+    border-bottom: black 2px solid;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    padding: 5px;
+}
+
+.row p{
+    margin: 8px;
+}
+
+.row a {
+    text-decoration: none;
+    color: black;
+}
+
+#contactform {
+    font-family: 'Quicksand', sans-serif;
+    padding: 1em;
+}
+
+#contactform h2 {
+    text-align: center;
+}
+
+.last {
+    border-bottom:none;
+}
+
+#questions {
+    height: 100px;
+    width: 320px;
+}
+
+footer {
+    margin-top: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+    background-color: rgb(244,164,96);
+}
+
+footer h4 {
+    color: white;
+    font-family: 'Josefin Slab', serif;
+    font-size: 70%;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Josefin Slab', serif;
+}
+
+/* Media Query for Tablet Viewport */  
+@media screen and (min-width: 630px){
+
+    /* Tablet Viewport: Show tablet-desktop class, hide mobile class */	
+	.tablet-desktop{
+		display: block;   
+	}
+
+	.mobile, .mobile-nav, .mobile-nav a.menu-icon {   
+		display: none;   
+	}
+
+    nav img{
+        position: static;
+        margin: 0 auto;
+        width: 50%;
+    }
+    
+    nav ul {
+        list-style-type: none; 
+        text-align: center; 
+        background-color: rgb(74,101,46);
+    }
+    
+    nav li{
+        border-top: none;
+		display: inline-block; 
+	 	border-right: 1px solid black;
+    }
+
+    nav li:last-child {
+		border-right: none;
+	}
+    
+    nav li a {
+        display: block;
+        padding: 0.25em 0.75em;
+        text-decoration: none;
+        color: black;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 20px;
+    }
+
+    .gridcontainer {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }    
+
+    .griditem img {
+        width: 100%;
+    }   
+
+    .button {
+        padding: 20px;
+        margin: 18px 0;
+        font-size: 110%;
+        font-weight: bold;
+    }
+
+    #introduction, #order {
+        margin: 0;
+    }
+
+    footer h4 {
+        font-size: 100%;
+    }
+    
+}
+
+/* Media Query for Desktop Viewport */  
+@media screen and (min-width: 992px){
+
+    /* Tablet Viewport: Show tablet-desktop class, hide mobile class */	
+	.tablet-desktop{
+		display: block;   
+	}
+
+	.mobile, mobile-nav, .mobile-nav a.menu-icon {   
+		display: none;   
+	}
+
+    nav {
+        clear: left;
+        float: left;
+    }
+    
+    nav img{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    nav ul {
+        list-style-type: none; 
+        width: 25%;
+        height: 100%;
+        position: fixed;
+        background-color: rgb(74,101,46);
+    }
+    
+    nav li{
+        font-size: 1em;
+        border: none;
+    }
+    
+    nav li a {
+        display: block;
+        padding: 0.5em 3em;
+        text-decoration: none;
+        color: black;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 20px;
+    }
+
+    #hero {
+        margin-left: 25%;
+    }
+
+    main {
+        margin-left: 25%;
+    }
+
+    .gridcontainer {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }    
+
+    .griditem img {
+        width: 100%;
+    }
+
+    .button {
+        padding: 20px;
+        margin: 18px 0;
+        font-size: 110%;
+        font-weight: bold;
+    }
+
+    #introduction {
+        margin: 30px;
+    }
+
+    footer {
+        width: 75%;
+        margin-left: 25%;
+    }
+
+    footer h4 {
+        font-size: 100%;
+    }
+    
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--This website template was created by: Amelia Rosalind-->
+<html lang="en">
+    <head>
+        <title>Contact Us</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300&family=Manrope:wght@200&family=Quicksand&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+        <script>
+            function hamburger() {
+                var menu = document.getElementById("menu-links");   
+                var logo = document.getElementById("ffc-logo");
+                if (menu.style.display === "block" && logo.style.display === "none") {
+                    menu.style.display = "none";
+                    logo.style.display = "block";
+                } else {
+                    menu.style.display = "block";
+                    logo.style.display = "none";
+                }
+            }
+            function validateForm() {
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var questions = document.getElementById("questions").value;
+                if (name == "") {
+                    alert("Name must be filled");
+                }
+                else if (email == "") {
+                    alert("Email must be filled");
+                }
+                else if (questions == "") {
+                    alert("Questions must be filled");
+                }
+                else {
+                    alert("Thank you for contacting us, please wait for 3 days for us to reply.");
+                }
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+
+        <div id="container">
+
+            <nav class="mobile-nav">
+                <div id="menu-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <a class="menu-icon" onclick="hamburger()">
+                    <div>&#9776;</div>
+                </a>
+            </nav>   
+
+            <nav class="tablet-desktop">
+                <ul>
+                    <a href="index.html"><img src="images/logo.jpg" alt="Boulder Climb Logo"></a>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <header class="mobile">
+                <a href="index.html"><img src="images/logo.jpg" alt="Boulder Climb Logo"></a>
+            </header>
+
+            <main>
+                <br>
+                <div id="contact">
+
+                    <div class="row">
+                        <h1>Give us a call!</h1>
+                        <h3>Phone:<a href="tel:0747791243">07 4779 1243</a></h3>
+                        <h3>Fax: 07 4779 1244</h3>
+                        <p>The best time to call us is during trading hours. We would be very happy to hear from you!</p>
+                    </div>
+                    <div class="row">
+                        <h1>Visit us!</h1>
+                        <h3>223 Bolsover St in Cairville, Queensland</h3>
+                        <p>Trading hours:</p>
+                        <p>Monday to Friday: 9 am to 6 pm</p>
+                        <p>Saturday to Sunday: 9 am to 9 pm</p>
+                    </div>
+                    <div class="row last">
+                        <h2>Or email us!</h2>
+                        <h3><a href="mailto: boulderclimbcs@boulderclimb.com.au">boulderclimbcs@boulderclimb.com.au</a></h3>
+                        <p>If you have further inquires you can contact us through call or email.</p>
+                    </div>
+                    
+                    <br><br>
+
+                    <div id="contactform">
+                        <h2>Complete the form to contact us for further inquiries</h2>
+                        <form name="myForm" onsubmit="return validateForm()">
+                            <fieldset>
+                                <legend>Customer Information</legend>
+                                <ul>
+                                    <li>
+                                        <label for="name">Name:</label>
+                                    <input type="text" name="name" id="name">
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <label for="email">Email:</label>
+                                    <input type="text" name="email" id="email">
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Questions</legend>
+                                <textarea name="questions" id="questions" row="20" cols="40"></textarea>
+                            </fieldset>
+                            <input type="submit" value="Submit" class="button">
+                        </form>
+                    </div>
+                </div>
+            </main>
+            
+            <footer>
+                <h4>223 Bolsover St in Cairville, Queensland</h4>
+                <h4>Mon-Fri: 9 am to 4 pm</h4>
+                <h4>Sat-Sun: 9 am to 12 pm</h4>
+                <h4><a href="tel:0747791243">07 4779 1243</a></h4>
+            </footer>
+
+        </div>
+    </body>
+</html>
